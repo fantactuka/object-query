@@ -48,7 +48,7 @@ Usage examples
 
 **limit()**
 
-`new Jql(entireData).where('age >= ?', 25).limit(2).query()`
+    new Jql(entireData).where('age >= ?', 25).limit(2).query()
 
     [
         { name: 'Rob', id: 2, age: 42 },
@@ -58,7 +58,7 @@ Usage examples
 
 **offset()**
 
-`new Jql(entireData).where('age >= ?', 25).offset(1).query()`
+    new Jql(entireData).where('age >= ?', 25).offset(1).query()
 
     [
         { name: 'Hap', id: 4, age: 54 },
@@ -68,7 +68,7 @@ Usage examples
 
 **select()**
 
-`new Jql(entireData).where('age >= ?', 25).select('name').query()`
+    new Jql(entireData).where('age >= ?', 25).select('name').query()
 
     ['Rob', 'Hap', 'Ted']
 
