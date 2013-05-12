@@ -98,7 +98,7 @@ Scopes could be usefull if you want to apply save queries options for different 
 
 
     var searchScope = new Jql().select('name').where('age > ', 20).where(function(dataItem) {
-        dataItem item.name.match(/[a-z]$/);
+        return dataItem.name.match(/[a-z]$/);
     }.order('age', true).limit(10).scope();
 
     searchScope.from(dataSet1).query();
