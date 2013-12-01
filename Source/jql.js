@@ -24,17 +24,17 @@
      */
     var assignments = ['select', 'limit', 'offset', 'from'];
     for (var i = 0, l = assignments.length; i < l; i ++) {
-        (function(i) {
+        (function(methodName) {
             /**
              * @method [select, limit, offset, from]
              * @param param
              * @return {Object} Jql instance
              */
-            Jql.prototype[assignments[i]] = function(param) {
-                this.querySettings[assignments[i]] = param;
+            Jql.prototype[methodName] = function(param) {
+                this.querySettings[methodName] = param;
                 return this;
             };
-        })(i);
+        })(assignments[i]);
     }
 
 
